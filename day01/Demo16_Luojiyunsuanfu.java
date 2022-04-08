@@ -56,5 +56,44 @@ public class Demo16_Luojiyunsuanfu {
         System.out.println(!!!(i < j));//!!!false
         System.out.println("==================================================");
 
+        /**
+         * 短路运算符
+         *      &&      短路与     作用和 & 相同，但是有短路效果
+         *      ||      短路或     作用和 | 相同，但是有短路效果
+         *
+         *
+         * 注意事项：
+         *      逻辑与&，无论左面真假，右面都要执行
+         *      短路与&&，如果左面为真，右面执行；如果左面为假，右面不执行
+         *
+         *      逻辑或 |，无论左面真假，右面都要执行
+         *      短路或 ||，如果左面为假，右面执行；如果左面为真，右面不执行
+         *
+         *
+         * 最常见的逻辑运算：&&，||，！
+         */
+
+        //^ 相同为false，不同则为true
+        System.out.println((i > j)&&(i > j));//false && false
+        System.out.println((i < j)&&(i > j));//true && false
+        System.out.println((i > j)&&(i < j));//false && ture
+        System.out.println((i < j)&&(i < j));//true && true
+        System.out.println("==================================================");
+
+        //^ 相同为false，不同则为true
+        System.out.println((i > j)||(i > j));//false || false
+        System.out.println((i < j)||(i > j));//true || false
+        System.out.println((i > j)||(i < j));//false || ture
+        System.out.println((i < j)||(i < j));//true || true
+        System.out.println("==================================================");
+
+        //&&和&
+//        System.out.println((i++ > 100)  &   (j++ > 100));//false & false//i = 11,j=21
+        System.out.println((i++ > 100)  &&   (j++ > 100));//false & false//i = 11,j = 20,因为i++为false，所以 j++ > 100就没有执行了
+        System.out.println("i:"+i);
+        System.out.println("j:"+j);
+
+
+
     }
 }

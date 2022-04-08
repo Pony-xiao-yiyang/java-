@@ -15,6 +15,11 @@ public class Demo15_Guanxiyunsuanfu {
          *          >=      a>=b    判断a是否大于等于b，成立为true，不成立为false；
          *          <       a<=b    判断a是否小于b，成立为true，不成立为false；
          *          <=      a<=b    判断a是否小于等于b，成立为true，不成立为false；
+         *
+         *
+         * 注意：
+         *      关系运算符的结果都是Boolean类型，要么是true，要么是false；
+         *      千万别把"=="误写成"="
          */
 
         //定义变量
